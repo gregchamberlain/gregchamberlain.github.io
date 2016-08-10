@@ -6,7 +6,7 @@ export default class Home extends Component {
     const { children } = this.props;
     return (
       <div>
-        <h1>This is my Home</h1>
+        <h1>Greg Chamberlain</h1>
       </div>
     );
   }

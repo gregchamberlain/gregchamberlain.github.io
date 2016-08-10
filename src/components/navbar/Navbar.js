@@ -1,12 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 
-export default class Home extends Component {
+import NavbarBrand from './NavbarBrand';
+
+export default class NavBar extends Component {
 
   render() {
     const { children } = this.props;
     return (
       <div>
         <div style={styles.navbar}>
+          <NavbarBrand href="/">Greg</NavbarBrand>
         </div>
         <div style={styles.content}>
           {children}
@@ -15,6 +18,14 @@ export default class Home extends Component {
     );
   }
 }
+
+NavbarBrand.propTypes = {
+  bgcolor: PropTypes.string,
+};
+
+NavbarBrand.defaultProps = {
+  bgcolor: "red",
+};
 
 const styles = {
   navbar: {
