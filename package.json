@@ -1,0 +1,43 @@
+{
+  "name": "new-skeleton",
+  "version": "1.0.0",
+  "description": "react + react-router + redux skeleton",
+  "main": "index.js",
+  "scripts": {
+    "start": "hjs-dev-server",
+    "build": "NODE_ENV=production webpack --progress",
+    "deploy": "npm run build && surge -p public -d somedomain.com"
+  },
+  "author": "Greg Chamberlain",
+  "license": "ISC",
+  "dependencies": {
+    "hjs-webpack": "^8.3.0",
+    "humps": "^1.0.0",
+    "isomorphic-fetch": "^2.2.1",
+    "normalizr": "^2.0.0",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-redux": "^4.4.0",
+    "react-router": "^2.0.0",
+    "react-router-redux": "^3.0.0",
+    "redux": "^3.3.1",
+    "redux-devtools": "^3.1.1",
+    "redux-devtools-dock-monitor": "^1.0.1",
+    "redux-devtools-log-monitor": "^1.0.4",
+    "redux-thunk": "^1.0.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.2",
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.0.1",
+    "css-loader": "^0.23.1",
+    "postcss-loader": "^0.8.0",
+    "react-hot-loader": "^1.3.0",
+    "style-loader": "^0.13.0",
+    "stylus-loader": "^1.5.1",
+    "yeticss": "^7.2.1"
+  }
+}
