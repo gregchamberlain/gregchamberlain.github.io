@@ -14,7 +14,7 @@ const toolbarItems = [
   <ToolbarItem>Greg Chamberlain</ToolbarItem>,
   <ToolbarGroup float="right">
     <ToolbarItem>About</ToolbarItem>
-    <ToolbarItem>Project</ToolbarItem>
+    <ToolbarItem>Projects</ToolbarItem>
   </ToolbarGroup>
 ];
 
