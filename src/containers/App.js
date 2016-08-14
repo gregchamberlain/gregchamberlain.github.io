@@ -2,8 +2,13 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import Navbar from '../components/navbar/Navbar';
-import { Sidebar } from 'react-responsive-sidebar';
+import { Sidebar, SidebarItem } from 'react-responsive-sidebar';
 import { Toolbar, ToolbarGroup, ToolbarItem } from 'react-responsive-toolbar';
+
+import  Dashboard from 'react-icons/lib/fa/dashboard';
+import  User from 'react-icons/lib/fa/user';
+import  Gear from 'react-icons/lib/fa/cog';
+
 
 const toolbarItems = [
   <ToolbarItem>Greg Chamberlain</ToolbarItem>,
@@ -13,13 +18,27 @@ const toolbarItems = [
   </ToolbarGroup>
 ];
 
+const sidebarItems = [
+  <SidebarItem leftIcon={<Dashboard/>} href="/dashboard">Dashboard</SidebarItem>,
+  <SidebarItem leftIcon={<User/>} href="/profile">Profile</SidebarItem>,
+  <SidebarItem leftIcon={<Gear/>} href="/settings">Settings</SidebarItem>,
+];
+
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapsed: false,
+    };
+  }
 
   render() {
     const { children } = this.props;
     return (
-      <Sidebar items={[]}>
-        <Toolbar sidebarIcon={true} items={toolbarItems}>
+      <Sidebar content={sidebarItems}
+        onCollapse={(collapsed) => this.setState({collapsed})}>
+        <Toolbar sidebarIcon={this.state.collapsed} items={toolbarItems} fixed={true}>
           {children}
         </Toolbar>
       </Sidebar>
