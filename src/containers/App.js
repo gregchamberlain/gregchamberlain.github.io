@@ -20,7 +20,7 @@ const toolbarItems = [
 ];
 
 const sidebarItems = [
-  <SidebarItem leftIcon={<Mine/>} href="https://gregchamberlain.github.io/react-minesweeper">React Minesweeper</SidebarItem>,
+  <SidebarItem leftIcon={<Mine/>} href="https://gregchamberlain.github.io/react-minesweeper/">React Minesweeper</SidebarItem>,
   <SidebarItem leftIcon={<Dashboard/>} href="/dashboard">Dashboard</SidebarItem>,
   <SidebarItem leftIcon={<User/>} href="/profile">Profile</SidebarItem>,
   <SidebarItem leftIcon={<Gear/>} href="/settings">Settings</SidebarItem>,
