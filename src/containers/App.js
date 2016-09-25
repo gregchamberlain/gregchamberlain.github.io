@@ -24,6 +24,7 @@ const sidebarItems = [
   <SidebarItem leftIcon={<Dashboard/>} href="/dashboard">Dashboard</SidebarItem>,
   <SidebarItem leftIcon={<User/>} href="/profile">Profile</SidebarItem>,
   <SidebarItem leftIcon={<Gear/>} href="/settings">Settings</SidebarItem>,
+  <SidebarItem leftIcon={<Gear/>} href="/dnd">DnDLayout</SidebarItem>,
 ];
 
 class App extends Component {
